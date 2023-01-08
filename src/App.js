@@ -1,5 +1,5 @@
-import Costs from "./components/Costs";
-
+import Costs from "./components/Costs/Costs";
+import NewCost from "./components/NewCost/NewCost";
 function App() {
     const someData = [
         {
@@ -23,6 +23,7 @@ function App() {
   return (
 
       <div>
+          <NewCost/>
           <Costs someData = {someData}/>
       </div>
   );

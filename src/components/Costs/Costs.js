@@ -1,6 +1,6 @@
 import './Costs.css'
 import CostItem from "./Cost-item";
-import Card from "./Card";
+import Card from "../UI/Card";
 function Costs(props){
     return(
         <Card className="costs">

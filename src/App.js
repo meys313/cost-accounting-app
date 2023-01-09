@@ -1,30 +1,44 @@
 import Costs from "./components/Costs/Costs";
 import NewCost from "./components/NewCost/NewCost";
+import {useState} from "react";
 function App() {
     const someData = [
         {
             date: new Date(),
             title: 'продукты',
-            amount: '1000'
+            amount: '1000',
+            id: '0.11111'
         },
         {
             date: new Date(),
             title: 'интернет',
-            amount: '900'
+            amount: '900',
+            id: '0.111121'
         },
         {
             date: new Date(),
             title: 'вещи',
-            amount: '10 000'
-        }
+            amount: '10 000',
+            id: '0.1111111'
+        },
+        {
+            date: new Date("02.11.2022"),
+            title: 'такси',
+            amount: '400',
+            id: '0.111112'
+        },
     ]
+    const [stateData, setStateData] = useState(someData)
 
-
+    const addCostHandler = (newCostData) => {
+        setStateData(prevState => {return [...prevState, newCostData]})
+        console.log(someData.length)
+    }
   return (
 
       <div>
-          <NewCost/>
-          <Costs someData = {someData}/>
+          <NewCost addCost = {addCostHandler}/>
+          <Costs someData = {stateData} setStateData = {setStateData}/>
       </div>
   );
 }

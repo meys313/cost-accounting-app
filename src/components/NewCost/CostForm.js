@@ -14,7 +14,7 @@ const CostForm = (props) => {
         event.preventDefault();
         const costData = {
             title: inputForm.text,
-            amount: inputForm.number,
+            amount: Number(inputForm.number),
             date: new Date(inputForm.date)
         };
         setTimeout(() => event.target.reset(), 500);
@@ -32,7 +32,7 @@ const CostForm = (props) => {
 
             <div className="new-cost__control">
                 <label htmlFor="">Сумма</label>
-                <input type='number' min='0.01' step='0.01' onChange = {inputChangeHandler}/>
+                <input type='number' min='0' step='50' onChange = {inputChangeHandler}/>
             </div>
 
             <div className="new-cost__control">

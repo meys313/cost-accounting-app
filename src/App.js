@@ -7,25 +7,25 @@ const someData = [
     {
         date: new Date(),
         title: 'продукты',
-        amount: '1000',
+        amount: 1000,
         id: '0.11111'
     },
     {
         date: new Date(),
         title: 'интернет',
-        amount: '900',
+        amount: 900,
         id: '0.111121'
     },
     {
         date: new Date(),
         title: 'вещи',
-        amount: '10 000',
+        amount: 10000,
         id: '0.1111111'
     },
     {
         date: new Date("02.11.2022"),
         title: 'такси',
-        amount: '400',
+        amount: 400,
         id: '0.111112'
     },
 ]

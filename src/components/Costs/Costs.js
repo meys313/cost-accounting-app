@@ -2,7 +2,9 @@ import './Costs.css'
 import CostItem from "./Cost-item";
 import Card from "../UI/Card";
 import CostsFilter from "./Costs-Filter";
+import CostsDiagram from "./Costs-diagram";
 import {useState} from "react";
+
 function Costs(props){
     const [selectedYear, setSelectedYear] = useState("");
     const yearFilterChangeHandler = (year)=> {
@@ -17,11 +19,17 @@ function Costs(props){
 
             <Card className="costs">
                 <CostsFilter costs = {props.someData} year = {selectedYear} onChangeYear={yearFilterChangeHandler}/>
-                {
 
+                {selectedYear ?
+                    <CostsDiagram costs = {filteredCosts} filterYear={true}/>
+                    :
+                    <CostsDiagram costs = {filteredCosts} filterYear={false} />
+                }
+
+
+                {
                filteredCosts.map((cost)=>{
                     return(
-
                         <CostItem
                             key = {cost.id}
                             date = {cost.date}

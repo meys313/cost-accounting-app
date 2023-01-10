@@ -5,10 +5,10 @@ const Diagram = (props) => {
     const maxMonthCosts = Math.max(...dataSetsValues);
     return(
         <div className="diagram">
-            {props.dataSets.map(data => (
+            {props.dataSets.map((data, index) => (
 
                     <DiagramBar
-                    key={props.label}
+                    key={index}
                     value={data.value}
                     maxValue = {maxMonthCosts}
                     label = {data.label}

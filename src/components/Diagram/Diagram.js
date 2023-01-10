@@ -8,7 +8,7 @@ const Diagram = (props) => {
             {props.dataSets.map(data => (
 
                     <DiagramBar
-                    key={Math.random().toString()}
+                    key={props.label}
                     value={data.value}
                     maxValue = {maxMonthCosts}
                     label = {data.label}

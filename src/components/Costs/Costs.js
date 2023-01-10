@@ -15,6 +15,8 @@ function Costs(props){
         props.someData.filter(data=>data.date.getFullYear().toString() === selectedYear) :
         props.someData;
 
+
+
     return(
 
             <Card className="costs">

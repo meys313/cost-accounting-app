@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cost-accounting-app/static/css/main.1ed7c6a1.css",
+    "main.js": "/cost-accounting-app/static/js/main.62c4a522.js",
+    "index.html": "/cost-accounting-app/index.html",
+    "main.1ed7c6a1.css.map": "/cost-accounting-app/static/css/main.1ed7c6a1.css.map",
+    "main.62c4a522.js.map": "/cost-accounting-app/static/js/main.62c4a522.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ed7c6a1.css",
+    "static/js/main.62c4a522.js"
+  ]
+}

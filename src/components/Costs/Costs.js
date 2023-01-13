@@ -16,6 +16,14 @@ function Costs(props){
         props.someData;
 
 
+    const deleteCostHandler = (id) => {
+        for(let costIndex in filteredCosts){
+           if(filteredCosts[costIndex].id === id){
+               filteredCosts.splice(costIndex, 1);
+               props.setStateData([...filteredCosts]);
+           }
+        }
+    }
 
     return(
 
@@ -34,9 +42,11 @@ function Costs(props){
                     return(
                         <CostItem
                             key = {cost.id}
+                            id = {cost.id}
                             date = {cost.date}
                             title = {cost.title}
                             amount = {cost.amount}
+                            onDelete = {deleteCostHandler}
                         />
                     )
             })}

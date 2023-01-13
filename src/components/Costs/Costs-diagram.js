@@ -41,7 +41,6 @@ const CostsDiagram = (props) => {
           diagramDataSets[allYears.indexOf(costYear)].value += cost.amount
         }
 
-        console.log(diagramDataSets)
     }
 
 

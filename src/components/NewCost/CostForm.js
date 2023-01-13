@@ -12,14 +12,20 @@ const CostForm = (props) => {
     }
     const submitHandler = (event) => {
         event.preventDefault();
-        const costData = {
-            title: inputForm.text,
-            amount: Number(inputForm.number),
-            date: new Date(inputForm.date)
-        };
-        setTimeout(() => event.target.reset(), 500);
+        if (inputForm.text && inputForm.number && inputForm.date){
+            const costData = {
+                title: inputForm.text,
+                amount: Number(inputForm.number),
+                date: new Date(inputForm.date)
+            };
+            setTimeout(() => event.target.reset(), 500);
 
-        props.onNewCost(costData);
+            props.onNewCost(costData);
+        }
+        else{
+            alert('не все поля заполнены')
+        }
+
 
     }
     return <form onSubmit={submitHandler}>
@@ -32,7 +38,7 @@ const CostForm = (props) => {
 
             <div className="new-cost__control">
                 <label htmlFor="">Сумма</label>
-                <input type='number' min='0' step='50' onChange = {inputChangeHandler}/>
+                <input type='number' min='0' step='0' onChange = {inputChangeHandler}/>
             </div>
 
             <div className="new-cost__control">

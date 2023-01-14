@@ -22,12 +22,6 @@ const someData = [
         amount: 10000,
         id: '0.1111111'
     },
-    {
-        date: new Date("02.11.2022"),
-        title: 'такси',
-        amount: 400,
-        id: '0.111112'
-    },
 ]
 function App() {
 
